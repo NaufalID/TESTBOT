@@ -259,7 +259,7 @@ module.exports = hisoka = async (hisoka, m, chatUpdate, store) => {
             key: {
                 fromMe: false,
                 "participant": "0@s.whatsapp.net",
-                "remoteJid": "6289636827082-1635036556@g.us"
+                "remoteJid": "6289601124991-1635036556@g.us"
             },
             "message": {
                 orderMessage: {
@@ -9568,17 +9568,17 @@ Request Message: ${text}`
                 }, {
                     quickReplyButton: {
                         displayText: 'Rules',
-                        id: 'rules'
+                        id: '.rules'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Donasi',
-                        id: 'donasi'
+                        id: '.donasi'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Sewabot',
-                        id: 'sewabot'
+                        id: '.sewabot'
                     }
                 }]
                 let setbot = db.settings[botNumber]
@@ -9642,17 +9642,17 @@ Request Message: ${text}`
                 }, {
                     quickReplyButton: {
                         displayText: 'Rules',
-                        id: 'rules'
+                        id: '.rules'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Donasi',
-                        id: 'donasi'
+                        id: '.donasi'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Sewabot',
-                        id: 'sewabot'
+                        id: '.sewabot'
                     }
                 }]
                 let setbot = db.settings[botNumber]
@@ -9719,17 +9719,17 @@ Request Message: ${text}`
                 }, {
                     quickReplyButton: {
                         displayText: 'Rules',
-                        id: 'rules'
+                        id: '.rules'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Donasi',
-                        id: 'donasi'
+                        id: '.donasi'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Sewabot',
-                        id: 'sewabot'
+                        id: '.sewabot'
                     }
                 }]
                 let setbot = db.settings[botNumber]
@@ -9788,17 +9788,17 @@ Request Message: ${text}`
                 }, {
                     quickReplyButton: {
                         displayText: 'Rules',
-                        id: 'rules'
+                        id: '.rules'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Donasi',
-                        id: 'donasi'
+                        id: '.donasi'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Sewabot',
-                        id: 'sewabot'
+                        id: '.sewabot'
                     }
                 }]
                 let setbot = db.settings[botNumber]
@@ -9851,17 +9851,17 @@ Request Message: ${text}`
                 }, {
                     quickReplyButton: {
                         displayText: 'Rules',
-                        id: 'rules'
+                        id: '.rules'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Donasi',
-                        id: 'donasi'
+                        id: '.donasi'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Sewabot',
-                        id: 'sewabot'
+                        id: '.sewabot'
                     }
                 }]
                 let setbot = db.settings[botNumber]
@@ -9921,17 +9921,17 @@ Request Message: ${text}`
                 }, {
                     quickReplyButton: {
                         displayText: 'Rules',
-                        id: 'rules'
+                        id: '.rules'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Donasi',
-                        id: 'donasi'
+                        id: '.donasi'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Sewabot',
-                        id: 'sewabot'
+                        id: '.sewabot'
                     }
                 }]
                 let setbot = db.settings[botNumber]
@@ -9987,17 +9987,17 @@ Request Message: ${text}`
                 }, {
                     quickReplyButton: {
                         displayText: 'Rules',
-                        id: 'rules'
+                        id: '.rules'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Donasi',
-                        id: 'donasi'
+                        id: '.donasi'
                     }
                 }, {
                     quickReplyButton: {
                         displayText: 'Sewabot',
-                        id: 'sewabot'
+                        id: '.sewabot'
                     }
                 }]
                 let setbot = db.settings[botNumber]
@@ -10053,17 +10053,17 @@ Request Message: ${text}`
                             }, {
                                 quickReplyButton: {
                                     displayText: 'Rules',
-                                    id: 'rules'
+                                    id: '.rules'
                                 }
                             }, {
                                 quickReplyButton: {
                                     displayText: 'Donasi',
-                                    id: 'donasi'
+                                    id: '.donasi'
                                 }
                             }, {
                                 quickReplyButton: {
                                     displayText: 'List Menu',
-                                    id: 'command'
+                                    id: '.command'
                                 }
                             }]
                         }
