@@ -173,14 +173,6 @@ let caklontong_desk = db.game.lontong_desk = []
 let tebakkalimat = db.game.kalimat = []
 let tebaklirik = db.game.lirik = []
 let tebaktebakan = db.game.tebakan = []
-let tebakbendera = db.data.game.bendera = []
-let tebakbendera2 = db.data.game.bendera2 = []
-let tebakkabupaten = db.data.game.kabupaten = []
-let tebakkimia = db.data.game.kimia = []
-let tebakasahotak = db.data.game.asahotak = []
-let tebaksiapakahaku = db.data.game.siapakahaku = []
-let tebaksusunkata = db.data.game.susunkata = []
-let tebaktekateki = db.data.game.tekateki = []
 let vote = db.others.vote = []
 
 moment.tz.setDefault("Asia/Jakarta").locale("id")
@@ -531,168 +523,6 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                     type: 1
                 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, m)
                 delete tebaktebakan[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebakasahotak.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebakasahotak[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebakasahotak[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak asahotak',
-                    buttonText: {
-                        displayText: '⌲ Tebak Asah Otak'
-                    },
-                    type: 1
-                }], `🎮 Asah Otak 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebakasahotak[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebaksiapakahaku.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebaksiapakahaku[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebaksiapakahaku[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak siapakahaku',
-                    buttonText: {
-                        displayText: '⌲ Tebak Siapkah Aku'
-                    },
-                    type: 1
-                }], `🎮 Siapakah Aku 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebaksiapakahaku[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebaksusunkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebaksusunkata[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebaksusunkata[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak susunkata',
-                    buttonText: {
-                        displayText: '⌲ Tebak Susun Kata'
-                    },
-                    type: 1
-                }], `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebaksusunkata[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebakbendera.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebakbendera[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebakbendera[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak bendera',
-                    buttonText: {
-                        displayText: '⌲ Tebak Bendera'
-                    },
-                    type: 1
-                }], `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebakbendera[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebakbendera2.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebakbendera2[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebakbendera2[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak bendera2',
-                    buttonText: {
-                        displayText: '⌲ Tebak Bendera 2'
-                    },
-                    type: 1
-                }], `🎮 Tebak Bendera 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebakbendera2[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebakkabupaten[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebakkabupaten[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak kabupaten',
-                    buttonText: {
-                        displayText: '⌲ Tebak Kabupaten'
-                    },
-                    type: 1
-                }], `🎮 Tebak Kabupaten 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebakkabupaten[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebaksusunkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebaksusunkata[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebaksusunkata[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak susunkata',
-                    buttonText: {
-                        displayText: '⌲ Tebak Susun Kata'
-                    },
-                    type: 1
-                }], `🎮 Susun Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebaksusunkata[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebakkimia.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebakkimia[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebakkimia[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak kimia',
-                    buttonText: {
-                        displayText: '⌲ Tebak Kimia'
-                    },
-                    type: 1
-                }], `🎮 Tebak Kimia 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebakkimia[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
-        }
-
-        if (tebaktekateki.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
-            kuis = true
-            jawaban = tebaktekateki[m.sender.split('@')[0]]
-            if (budy.toLowerCase() == "nyerah") {
-                await m.reply('*Anda Telah menyerah*')
-                delete tebaktekateki[m.sender.split('@')[0]]
-            } else if (budy.toLowerCase() == jawaban) {
-                await hisoka.sendButtonText(m.chat, [{
-                    buttonId: 'tebak tekateki',
-                    buttonText: {
-                        displayText: '⌲ Tebak Teka Teki'
-                    },
-                    type: 1
-                }], `🎮 Teka Teki 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, hisoka.user.name, fakestatus)
-                delete tebaktekateki[m.sender.split('@')[0]]
             } else m.reply('*Jawaban Salah!*')
         }
         // auto set bio
@@ -1976,7 +1806,7 @@ Follow Instagram: https://instagram.comnauffhdkz`
                 predea = await axios.get(`https://api.agify.io/?name=${q}`)
                 m.reply(`Nama : ${predea.data.name}\n*Mati Pada Umur :* ${predea.data.age} Tahun.\n\n_Cepet Cepet Tobat Bro Soalnya Mati ga ada yang tau_`)
                 break
-            case 'halah':
+                case 'halah':
             case 'hilih':
             case 'huluh':
             case 'heleh':
@@ -1986,351 +1816,155 @@ Follow Instagram: https://instagram.comnauffhdkz`
                 tex = m.quoted ? m.quoted.text ? m.quoted.text : q ? q : m.text : q ? q : m.text
                 m.reply(tex.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
                 break
-                case 'tebakmenu': {
-                    let menuss = [
-                   {
-                   title: "Tebak-tebakan Menu",
-                   rows: [
-                   {title: "Tebak Lagu", rowId: `tebak lagu`, description: `Tebak judul lagu dari musik`},
-                   {title: "Tebak Gambar", rowId: `tebak gambar`, description: `Tebak kalimat dari setiap gambar`},
-                   {title: "Tebak Kata", rowId: `tebak kata`, description: `Tebak Kata dari soal yg diberikan`},
-                   {title: "Tebak Kalimat", rowId: `tebak kalimat`, description: `Tebak kalimat/bagian yg rumpang`},
-                   {title: "Tebak Lirik", rowId: `tebak lirik`, description: `Melengkapi bagian rumpang dari lirik yg diberikan`},
-                   {title: "Tebak Tebakan", rowId: `tebak tebakan`, description: `Tebak soal dengan cepat`},
-                   {title: "Cak Lontong", rowId: `tebak lontong`, description: `Teka-teki advanced yg hanya bisa dijawab out of the box`},
-                   {title: "Tebak Bendera", rowId: `tebak bendera`, description: `Tebak nama negara dari sebuah bendera`},
-                   {title: "Tebak Bendera V2", rowId: `tebak bendera2`, description: `Tebak nama negara dari sebuah bendera`},
-                   {title: "Tebak Kabupaten", rowId: `tebak kabupaten`, description: `Tebak nama kabupaten dari sebuah bendera`},
-                   {title: "Tebak kimia", rowId: `tebak kimia`, description: `Tebak nama lambang dari sebuah zat/unsur`},
-                   {title: "Asah Otak", rowId: `tebak asahotak`, description: `Tebak-tebakan seputar Ilmu pengetahuan umum`},
-                   {title: "Siapakah Aku", rowId: `tebak siapakahaku`, description: `Tebak nama benda/makhluk dari sebuah soal yg diberikan`},
-                   {title: "Susun Kata", rowId: `tebak susunkata`, description: `Susun kata dari sebuah soal yg diberikan`},
-                   {title: "Teka-teki", rowId: `tebak teki`, description: `Tebak-tebakan penghibur kita semua :D`},
-                   ]
-                   },
-                   ]
-                   hisoka.sendListMsg(m.chat, `*Silahkan Pilih Menu Dibawah Ini*`, hisoka.user.name, `TEBAK MENU`, `Click Here`, menuss, floc)
-               }
-               break
-                case 'tebak': {
-                    if (args[0] === "lagu") {
-                        if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        let msg = await akame.sendMessage(m.chat, {
-                            audio: {
-                                url: result.link_song
-                            },
-                            mimetype: 'audio/mpeg'
-                        }, {
-                            quoted: ftroli
-                        })
-                        hisoka.sendText(m.chat, `Lagu Tersebut Adalah Lagu dari?\n\nArtist : ${result.artist}\nWaktu : 60s`, msg).then(() => {
-                            tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak lagu',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Lagu'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebaklagu[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'gambar') {
-                        if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakgambar.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        akame.sendImage(m.chat, result.img, `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${result.deskripsi}\nWaktu : 60s`, fakestatus).then(() => {
-                            tebakgambar[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak gambar',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Gambar'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakgambar[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'kata') {
-                        if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkata.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, fakestatus).then(() => {
-                            tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak kata',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Kata'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakkata[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'kalimat') {
-                        if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkalimat.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, fakestatus).then(() => {
-                            tebakkalimat[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak kalimat',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Kalimat'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakkalimat[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'lirik') {
-                        if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebaklirik.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        hisoka.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWaktu : 60s`, fakestatus).then(() => {
-                            tebaklirik[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak lirik',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Lirik'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebaklirik[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'tebakan') {
-                        if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebaktebakan.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        hisoka.sendText(m.chat, `Jawablah Pertanyaan Berikut : *${result.soal}*?\nWaktu : 60s`, fakestatus).then(() => {
-                            tebaktebakan[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak tebakan',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Tebakan'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebaktebakan[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebaktebakan[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'lontong') {
-                        if (caklontong.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/caklontong.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        hisoka.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\n${result.soal}*\nWaktu : 60s`, fakestatus).then(() => {
-                            caklontong[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                            caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
-                        })
-                        await sleep(60000)
-                        if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak lontong',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Lontong'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete caklontong[m.sender.split('@')[0]]
-                            delete caklontong_desk[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'bendera') {
-                        if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakbendera.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        akame.sendImage(m.chat, result.img, `Silahkan Jawab Gambar Berikut\n\nClue : ${result.flag}\nWaktu : 60s`, fakestatus).then(() => {
-                            tebakbendera[m.sender.split('@')[0]] = result.name.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakbendera.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.name)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak bendera',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Bendera'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakbendera[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakbendera[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'bendera2') {
-                        if (tebakbendera2.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakbendera2.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        akame.sendImage(m.chat, result.img, `Silahkan Jawab Gambar Berikut\n\nWaktu : 60s`, fakestatus).then(() => {
-                            tebakbendera2[m.sender.split('@')[0]] = result.name.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakbendera2.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.name)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak bendera',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Bendera'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakbendera2[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakbendera2[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'kabupaten') {
-                        if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkabupaten.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        akame.sendImage(m.chat, result.url, `Silahkan Jawab Gambar Berikut\n\nWaktu : 60s`, fakestatus).then(() => {
-                            tebakkabupaten[m.sender.split('@')[0]] = result.title.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakkabupaten.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.title)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak kabupaten',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Kabupaten'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakkabupaten[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakkabupaten[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'kimia') {
-                        if (tebakkimia.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                        let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkimia.json')
-                        let result = anu[Math.floor(Math.random() * anu.length)]
-                        hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\nUnsur : ${result.unsur}\nWaktu : 60s`, fakestatus).then(() => {
-                            tebakkimia[m.sender.split('@')[0]] = result.lambang.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakkimia.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.lambang)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak kimia',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Kimia'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakkimia[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakkimia[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'asahotak') {
-                    if (tebakasahotak.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/asahotak.json')
+            case 'tebak': {
+                if (!text) throw `Contoh : ${prefix + command} lagu\n\nOption : \n⬣ lagu\n⬣ gambar\n⬣ kata\n⬣ kalimat\n⬣ lirik\n⬣ lontong`
+                if (args[0] === "lagu") {
+                    if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
-                    hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\nSoal : ${result.soal}\nWaktu : 60s`, fakestatus).then(() => {
-                        tebakasahotak[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebakasahotak.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak asahotak',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Asah Otak'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebakasahotak[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebakasahotak[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'siapakahaku') {
-                    if (tebaksiapakahaku.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/siapakahaku.json')
-                    let result = anu[Math.floor(Math.random() * anu.length)]
-                    hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\nSoal : ${result.soal}\nWaktu : 60s`, fakestatus).then(() => {
-                        tebaksiapakahaku[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebaksiapakahaku.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak siapakahaku',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Siapakah Aku'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebaksiapakahaku[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebaksiapakahaku[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'susunkata') {
-                    if (tebaksusunkata.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/susunkata.json')
-                    let result = anu[Math.floor(Math.random() * anu.length)]
-                    hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\nSoal : ${result.soal}\nTipe : ${result.tipe}\nWaktu : 60s`, fakestatus).then(() => {
-                        tebaksusunkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebaksusunkata.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak susunkata',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Susun Kata'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebaksusunkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebaksusunkata[m.sender.split('@')[0]]
-                        }
-                    } else if (args[0] === 'tekateki') {
-                    if (tebaktekateki.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tekateki.json')
-                    let result = anu[Math.floor(Math.random() * anu.length)]
-                    hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\nSoal : ${result.soal}\nWaktu : 60s`, fakestatus).then(() => {
-                        tebaktekateki[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-                        })
-                        await sleep(60000)
-                        if (tebaktekateki.hasOwnProperty(m.sender.split('@')[0])) {
-                            console.log("Jawaban: " + result.jawaban)
-                            hisoka.sendButtonText(m.chat, [{
-                                buttonId: 'tebak tekateki',
-                                buttonText: {
-                                    displayText: '⌲ Tebak Teka Teki'
-                                },
-                                type: 1
-                            }], `Waktu Habis\nJawaban:  ${tebaktekateki[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, fakestatus)
-                            delete tebaktekateki[m.sender.split('@')[0]]
-                        }
-                    }
-                }
-                break
-                case 'kuismath':
-                case 'math': {
-                    if (kuismath.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
-                    let {
-                        genMath,
-                        modes
-                    } = require('./src/math')
-                    if (!text) throw `Mode: ${Object.keys(modes).join(' | ')}\nContoh penggunaan: ${prefix}math medium`
-                    let result = await genMath(text.toLowerCase())
-                    hisoka.sendText(m.chat, `*Berapa hasil dari: ${result.soal.toLowerCase()}*?\n\nWaktu: ${(result.waktu / 1000).toFixed(2)} detik`, fakestatus).then(() => {
-                        kuismath[m.sender.split('@')[0]] = result.jawaban
+                    let msg = await hisoka.sendMessage(m.chat, {
+                        audio: {
+                            url: result.link_song
+                        },
+                        mimetype: 'audio/mpeg'
+                    }, {
+                        quoted: ftroli
                     })
-                    await sleep(result.waktu)
-                    if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
+                    hisoka.sendText(m.chat, `Lagu Tersebut Adalah Lagu dari?\n\nArtist : ${result.artist}\nWaktu : 60s`, msg).then(() => {
+                        tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+                    })
+                    await sleep(60000)
+                    if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
                         console.log("Jawaban: " + result.jawaban)
-                        m.reply("Waktu Habis\nJawaban: " + kuismath[m.sender.split('@')[0]])
-                        delete kuismath[m.sender.split('@')[0]]
+                        hisoka.sendButtonText(m.chat, [{
+                            buttonId: 'tebak lagu',
+                            buttonText: {
+                                displayText: 'Tebak Lagu'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, m)
+                        delete tebaklagu[m.sender.split('@')[0]]
+                    }
+                } else if (args[0] === 'gambar') {
+                    if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakgambar.json')
+                    let result = anu[Math.floor(Math.random() * anu.length)]
+                    hisoka.sendImage(m.chat, result.img, `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${result.deskripsi}\nWaktu : 60s`, m).then(() => {
+                        tebakgambar[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+                    })
+                    await sleep(60000)
+                    if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
+                        console.log("Jawaban: " + result.jawaban)
+                        hisoka.sendButtonText(m.chat, [{
+                            buttonId: 'tebak gambar',
+                            buttonText: {
+                                displayText: 'Tebak Gambar'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, m)
+                        delete tebakgambar[m.sender.split('@')[0]]
+                    }
+                } else if (args[0] === 'kata') {
+                    if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkata.json')
+                    let result = anu[Math.floor(Math.random() * anu.length)]
+                    hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
+                        tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+                    })
+                    await sleep(60000)
+                    if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
+                        console.log("Jawaban: " + result.jawaban)
+                        hisoka.sendButtonText(m.chat, [{
+                            buttonId: 'tebak kata',
+                            buttonText: {
+                                displayText: 'Tebak Kata'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, m)
+                        delete tebakkata[m.sender.split('@')[0]]
+                    }
+                } else if (args[0] === 'kalimat') {
+                    if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkalimat.json')
+                    let result = anu[Math.floor(Math.random() * anu.length)]
+                    hisoka.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
+                        tebakkalimat[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+                    })
+                    await sleep(60000)
+                    if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
+                        console.log("Jawaban: " + result.jawaban)
+                        hisoka.sendButtonText(m.chat, [{
+                            buttonId: 'tebak kalimat',
+                            buttonText: {
+                                displayText: 'Tebak Kalimat'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, m)
+                        delete tebakkalimat[m.sender.split('@')[0]]
+                    }
+                } else if (args[0] === 'lirik') {
+                    if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebaklirik.json')
+                    let result = anu[Math.floor(Math.random() * anu.length)]
+                    hisoka.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWaktu : 60s`, m).then(() => {
+                        tebaklirik[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+                    })
+                    await sleep(60000)
+                    if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
+                        console.log("Jawaban: " + result.jawaban)
+                        hisoka.sendButtonText(m.chat, [{
+                            buttonId: 'tebak lirik',
+                            buttonText: {
+                                displayText: 'Tebak Lirik'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, m)
+                        delete tebaklirik[m.sender.split('@')[0]]
+                    }
+                } else if (args[0] === 'lontong') {
+                    if (caklontong.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/caklontong.json')
+                    let result = anu[Math.floor(Math.random() * anu.length)]
+                    hisoka.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\n${result.soal}*\nWaktu : 60s`, m).then(() => {
+                        caklontong[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
+                        caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
+                    })
+                    await sleep(60000)
+                    if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
+                        console.log("Jawaban: " + result.jawaban)
+                        hisoka.sendButtonText(m.chat, [{
+                            buttonId: 'tebak lontong',
+                            buttonText: {
+                                displayText: 'Tebak Lontong'
+                            },
+                            type: 1
+                        }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, hisoka.user.name, m)
+                        delete caklontong[m.sender.split('@')[0]]
+                        delete caklontong_desk[m.sender.split('@')[0]]
                     }
                 }
-                break
+            }
+            break
+            case 'kuismath':
+            case 'math': {
+                if (kuismath.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                let {
+                    genMath,
+                    modes
+                } = require('./src/math')
+                if (!text) throw `Mode: ${Object.keys(modes).join(' | ')}\nContoh penggunaan: ${prefix}math medium`
+                let result = await genMath(text.toLowerCase())
+                hisoka.sendText(m.chat, `*Berapa hasil dari: ${result.soal.toLowerCase()}*?\n\nWaktu: ${(result.waktu / 1000).toFixed(2)} detik`, m).then(() => {
+                    kuismath[m.sender.split('@')[0]] = result.jawaban
+                })
+                await sleep(result.waktu)
+                if (kuismath.hasOwnProperty(m.sender.split('@')[0])) {
+                    console.log("Jawaban: " + result.jawaban)
+                    m.reply("Waktu Habis\nJawaban: " + kuismath[m.sender.split('@')[0]])
+                    delete kuismath[m.sender.split('@')[0]]
+                }
+            }
+            break
             case 'jodohku': {
                 if (!isPremium && global.db.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.users[m.sender].limit -= 1 // -1 limit
