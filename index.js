@@ -89,9 +89,11 @@ global.db = new Low(
 )
 global.DATABASE = global.db // Backwards Compatibility
 global.loadDatabase = async function loadDatabase() {
-    if (global.db.READ) return new Promise((resolve) => setInterval(function() {
-        (!global.db.READ ? (clearInterval(this), resolve(global.db == null ? global.loadDatabase() : global.db)) : null)
-    }, 1 * 1000))
+    if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
+  if (global.db.data !== null) return
+   // if (global.db.READ) return new Promise((resolve) => setInterval(function() {
+      //  (!global.db.READ ? (clearInterval(this), resolve(global.db == null ? global.loadDatabase() : global.db)) : null)//
+   // }, 1 * 1000))
     if (global.db !== null) return
     global.db.READ = true
     await global.db.read()
