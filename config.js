@@ -19,39 +19,39 @@ global.APIs = {
 //—————「 Website Apikey 」—————//
 global.APIKeys = {
     //gausah di apa² in, udah free apikey :)
-    'https://zenzapis.xyz': 'GuaAbuzz17',
+    'https://zenzapis.xyz': 'f9fccfcff1',
 }
 
 //—————「 Set Nama Bot & Own & Agama 」—————//
 //kok pake agama bang? fitur toleransi bang
-global.namabot = 'AsunaChan'
-global.namaowner = 'GuaAbuzz'
+global.namabot = 'Whatsapp-Bot-MD'
+global.namaowner = 'Naufal Muflih'
 global.agama = 'Islam'
 
 //—————「 Setting Owner 」—————//
-global.owner = ['6289636827082']
-global.premium = ['6289636827082']
+global.owner = ['6289601124991']
+global.premium = ['6289601124991']
 
 //—————「 Setting Nomor Donasi 」—————//
 //ubah aja kalau ada yg gapunya kasih tanda -
-global.telkomsel = ['6282171978174']
+global.telkomsel = ['-']
 global.xl = ['-']
 global.indosat = ['-']
-global.tri = ['6289636827082']
+global.tri = ['6281615997326']
 global.smartfren = ['-']
-global.gopay = ['6289636827082']
-global.dana = ['6289636827082']
+global.gopay = ['6281615997326']
+global.dana = ['6281615997326']
 global.ovo = ['-']
-global.saweria = ['https://saweria.co/GuaAbuzz']
+global.saweria = ['https://saweria.co/naufalmuflih']
 
 //—————「 Set Kebutuhan Button 」—————//
 //ubah aja kalau ada yang gapunya gsh di hps anggap aja credits :)
-global.github = 'https://github.com/Abuzzpoet'
-global.scbot = 'https://github.com/Abuzzpoet/Asuna'
-global.myweb = 'https://tiktok.com/@guaabuzz'
+global.github = 'https://github.com/naufalmuflih'
+global.scbot = 'https://github.com/Hisoka-Morrou/Hisoka-Morou'
+global.myweb = 'https://instagram.com/nauffhdkz'
 
 //—————「 Set Wm 」—————//
-global.packname = 'GuaAbuzz'
+global.packname = 'Naufal Muflih'
 global.author = 'WhatsApp Bot'
 
 //—————「 Set Nama Session 」—————//
@@ -85,7 +85,7 @@ global.mess = {
 //terserah mau ubah atau nggak
 global.limitawal = {
     premium: "Infinity",
-    free: 20,
+    free: 30,
     monayawal: 1000
 }
 global.rpg = {
