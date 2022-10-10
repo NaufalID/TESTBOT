@@ -4904,7 +4904,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/morensfw/zettairyouiki?apikey=GuaAbuzz17'
+                        url: 'https://zenzapis.xyz/api/morensfw/zettairyouiki?apikey=f9fccfcff1'
                     },
                     caption: `Astaghfirullah Tobat Kak`,
                     footer: hisoka.user.name,
@@ -5210,7 +5210,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
             case 'animequotes': {
                 if (!isPremium && global.db.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
                 db.users[m.sender].limit -= 1 // -1 limit
-                let anu = await fetchJson(`https://zenzapis.xyz/randomtext/animequotes2?apikey=GuaAbuzz17`)
+                let anu = await fetchJson(`https://zenzapis.xyz/randomtext/animequotes2?apikey=f9fccfcff1`)
                 let buttons = [{
                     buttonId: `${command}`,
                     buttonText: {
