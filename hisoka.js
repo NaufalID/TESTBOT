@@ -6410,9 +6410,7 @@ ${id}`)
             break
             case 'lolivid': {
                 m.reply(mess.wait)
-                if (!isPremium && global.db.users[m.sender].limit < 1) return m.reply(mess.endLimit) // respon ketika limit habis
-                db.users[m.sender].limit -= 1 // -1 limit
-                let buttons = [{
+               let buttons = [{
                     buttonId: `${prefix}lolivid`,
                     buttonText: {
                         displayText: 'Next..'
