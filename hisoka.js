@@ -3566,7 +3566,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/waifu?apikey=f9fccfcff1'
+                        url: 'https://waifu.pics/api/sfw/waifu'
                     },
                     caption: `Random Image Waifu`,
                     footer: hisoka.user.name,
@@ -3591,7 +3591,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/husbu?apikey=f9fccfcff1'
+                        url: 'https://api.lolhuman.xyz/api/random/husbu?apikey=e54205a4ca2caa368cc067bb'
                     },
                     caption: `Random Image Husbu`,
                     footer: hisoka.user.name,
@@ -3616,7 +3616,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/neko?apikey=f9fccfcff1'
+                        url: 'https://api.lolhuman.xyz/api/random/neko?apikey=8e66d0934cf741bfd2182c16'
                     },
                     caption: `Random Image Neko`,
                     footer: hisoka.user.name,
