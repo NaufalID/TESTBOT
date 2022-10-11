@@ -3616,7 +3616,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://api.lolhuman.xyz/api/random/neko?apikey=8e66d0934cf741bfd2182c16'
+                        url: 'https://api.waifu.pics/sfw/neko'
                     },
                     caption: `Random Image Neko`,
                     footer: hisoka.user.name,
@@ -3641,7 +3641,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/shinobu?apikey=f9fccfcff1'
+                        url: 'https://api.waifu.pics/sfw/shinobu'
                     },
                     caption: `Random Image Shinobu`,
                     footer: hisoka.user.name,
@@ -3666,7 +3666,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/megumin?apikey=f9fccfcff1'
+                        url: 'https://api.waifu.pics/sfw/megumin'
                     },
                     caption: `Random Image Megumin`,
                     footer: hisoka.user.name,
@@ -3691,7 +3691,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/uniform?apikey=f9fccfcff1'
+                        url: 'https://zenzapis.xyz/randomanime/uniform?apikey=f9fccfcff1'
                     },
                     caption: `Random Image Uniform`,
                     footer: hisoka.user.name,
@@ -3716,7 +3716,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/maid?apikey=f9fccfcff1'
+                        url: 'https://zenzapis.xyz/api/morensfw/maid?apikey=f9fccfcff1'
                     },
                     caption: `Random Image Maid`,
                     footer: hisoka.user.name,
@@ -3741,7 +3741,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/marin-kitagawa?apikey=f9fccfcff1'
+                        url: 'https://zenzapis.xyz/randomanime/marin-kitagawa?apikey=f9fccfcff1'
                     },
                     caption: `Random Image Marin Kitagawa`,
                     footer: hisoka.user.name,
@@ -3766,7 +3766,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/mori-calliope?apikey=f9fccfcff1'
+                        url: 'https://zenzapis.xyz/randomanime/mori-calliope?apikey=f9fccfcff1'
                     },
                     caption: `Random Image Mori Calliope`,
                     footer: hisoka.user.name,
@@ -3791,7 +3791,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/raiden-shogun?apikey=f9fccfcff1'
+                        url: 'https://zenzapis.xyz/randomanime/raiden-shogun?apikey=f9fccfcff1'
                     },
                     caption: `Random Image Raiden Shogun`,
                     footer: hisoka.user.name,
@@ -3816,7 +3816,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/oppai?apikey=f9fccfcff1'
+                        url: 'https://zenzapis.xyz/randomanime/oppai?apikey=f9fccfcff1'
                     },
                     caption: `Random Image Oppai`,
                     footer: hisoka.user.name,
@@ -3841,7 +3841,7 @@ ${vote[m.chat][2].map((v, i) => `├ ${i + 1}. @${v.split`@`[0]}`).join('\n')}
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://zenzapis.xyz/api/random/selfies?apikey=f9fccfcff1'
+                        url: 'https://zenzapis.xyz/randomanime/selfies?apikey=f9fccfcff1'
                     },
                     caption: `Random Image Selfies`,
                     footer: hisoka.user.name,
@@ -6146,7 +6146,7 @@ ${id}`)
                 }]
                 let buttonMessage = {
                     image: {
-                        url: 'https://api.zacros.my.id/asupan/cecan'
+                        url: 'https://zenzapis.xyz/randomasupan/cecan?apikey=f9fccfcff1'
                     },
                     caption: `Random ${command}`,
                     footer: hisoka.user.name,
@@ -6396,7 +6396,7 @@ ${id}`)
                 }]
                 let buttonMessage = {
                     video: {
-                        url: 'https://api.zacros.my.id/asupan/random'
+                        url: 'https://zenzapis.xyz/randomasupan/asupan?apikey=f9fccfcff1'
                     },
                     caption: `Random Video Asupan`,
                     footer: hisoka.user.name,
@@ -6467,7 +6467,7 @@ ${id}`)
                 }]
                 let buttonMessage = {
                     video: {
-                        url: 'https://api.lolhuman.xyz/api/asupan?apikey=8e66d0934cf741bfd2182c16'
+                        url: 'https://zenzapis.xyz/randomasupan/asupantiktok?apikey=f9fccfcff1'
                     },
                     caption: `Random ${command}`,
                     footer: hisoka.user.name,
